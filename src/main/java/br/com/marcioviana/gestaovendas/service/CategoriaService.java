@@ -12,13 +12,17 @@ import java.util.Optional;
 public class CategoriaService {
 
     @Autowired
-    CategoriaRepositorio categoriaRepositorio;
+    private CategoriaRepositorio categoriaRepositorio;
 
     public List<Categoria> buscarTodas(){
         return categoriaRepositorio.findAll();
     }
 
-    public Optional<Categoria> buscarPorCodigo(Long codigo){
-        return categoriaRepositorio.findById(codigo);
+    public Optional<Categoria> buscarPorId(Long id){
+        return categoriaRepositorio.findById(id);
+    }
+
+    public Categoria salvar(Categoria categoria){
+        return categoriaRepositorio.save(categoria);
     }
 }
