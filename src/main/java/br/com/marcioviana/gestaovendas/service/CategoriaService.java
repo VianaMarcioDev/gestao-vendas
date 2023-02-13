@@ -18,7 +18,7 @@ public class CategoriaService {
         return categoriaRepositorio.findAll();
     }
 
-    public Optional<Categoria> buscarPorId(Long Id){
-        return categoriaRepositorio.findById(Id);
+    public Optional<Categoria> buscarPorCodigo(Long codigo){
+        return categoriaRepositorio.findById(codigo);
     }
 }
